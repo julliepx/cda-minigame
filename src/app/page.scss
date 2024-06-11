@@ -1,0 +1,112 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    .background {
+        position: absolute;
+        width: 110vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-image: url('https://cidadealtarp.com/images/hero-bg.png');
+        z-index: -1;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8rem;
+        gap: 3rem;
+
+        .title {
+            font-size: 5.5rem;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: -0.25rem;
+            text-shadow: 0 0 4rem rgb(17, 19, 29);
+            animation: fadeInUpwards 2000ms ease-in-out;
+
+            span {
+                position: relative;
+            }
+
+            .o::before,
+            .crown::before,
+            .arrow-right::before {
+                content: '';
+                position: absolute;
+            }
+
+            .o::before {
+                background: url('https://cidadealtarp.com/images/symbols/o.svg') center center / contain no-repeat;
+                width: 83px;
+                height: 83px;
+                top: 0px;
+                left: 0px;
+            }
+
+            .crown::before {
+                background: url('https://cidadealtarp.com/images/symbols/crown.svg') center center / contain no-repeat;
+                width: 40px;
+                height: 45px;
+                top: -30px;
+                right: -20px;
+            }
+
+            .arrow-right::before {
+                background: url('https://cidadealtarp.com/images/symbols/arrow-right.svg') center center / contain no-repeat;
+                width: 165px;
+                height: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -40px;
+            }
+        }
+
+        .start-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25rem;
+            margin: 0 auto;
+            background: rgb(255, 192, 70);
+            border: none;
+            border-radius: 0.25rem;
+            letter-spacing: 0.5rem;
+            padding: 0.875rem 0;
+            font-weight: 800;
+            color: rgb(0, 0, 0);
+            font-size: 0.875rem;
+            animation: scaleUpSideways 2000ms ease-in-out;
+            cursor: pointer;
+            transition: all 200ms;
+
+            &:hover {
+                scale: 0.95;
+            }
+        }
+    }
+
+    .cda-logo {
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        bottom: 1rem;
+        left: 1rem;
+        transition: all 200ms;
+
+        &:hover {
+            scale: 0.95;
+
+            path {
+                fill: #FFC046;
+            }
+        }
+    }
+}
