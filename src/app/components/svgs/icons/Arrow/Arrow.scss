@@ -1,0 +1,27 @@
+.arrow {
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
+    width: 2rem;
+    height: 2rem;
+
+    &:hover {
+        scale: 0.9;
+    }
+
+    &.left {
+        transform: rotate(-90deg);
+    }
+
+    &.bottom {
+        transform: rotate(180deg);
+    }
+
+    &.right {
+        transform: rotate(90deg);
+    }
+
+    &.top {
+        transform: none;
+    }
+}

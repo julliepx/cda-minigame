@@ -5,7 +5,7 @@
     }
 
     40% {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
         opacity: 1;
     }
 
@@ -31,11 +31,27 @@
     }
 
     40% {
-        transform: scaleX(1.025);
+        transform: scaleX(1.05);
         opacity: 1;
     }
 
     100% {
         transform: scaleX(1.0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: none;
     }
 }

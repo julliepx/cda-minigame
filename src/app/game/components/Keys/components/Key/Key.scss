@@ -1,0 +1,19 @@
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid #FFFFFF;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: rgb(28, 31, 43);
+
+    &.success {
+        background-color: rgb(255, 192, 70);
+        border-color: rgb(255, 192, 70);
+        color: rgb(28, 31, 43);
+    }
+}

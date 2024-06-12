@@ -1,0 +1,13 @@
+.timer {
+    width: 80%;
+    height: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgb(28, 31, 43);
+
+    .current-time {
+        height: inherit;
+        border-radius: inherit;
+        width: 80%;
+        background-color: rgb(255, 192, 70);
+    }
+}

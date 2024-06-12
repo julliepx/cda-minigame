@@ -1,0 +1,13 @@
+.button-container {
+    position: relative;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 0.25rem;
+        transition: all 0.2s ease 0s;
+        cursor: pointer;
+    }
+}
