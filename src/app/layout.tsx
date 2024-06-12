@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Almarai } from "next/font/google";
-import "./styles/globals.scss";
+import "../styles/globals.scss";
 
 const almarai = Almarai({
   subsets: ["arabic"],

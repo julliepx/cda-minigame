@@ -16,13 +16,6 @@
             letter-spacing: 0.07em;
         }
 
-        .game {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
         .username-container {
             display: flex;
             flex-direction: column;
@@ -35,19 +28,6 @@
                 color: rgb(45, 48, 70);
             }
 
-        }
-
-        .start-button {
-            background-color: rgb(255, 192, 70);
-            color: #FFFFFF;
-            font-weight: 500;
-            font-size: 1.5rem;
-            letter-spacing: 0.055rem;
-            padding: 1rem 2.5rem;
-
-            &:hover {
-                scale: 0.95;
-            }
         }
     }
 }

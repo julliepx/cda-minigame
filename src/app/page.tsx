@@ -1,7 +1,7 @@
 "use client";
+import Button from "@/components/common/Button/Button";
+import AltaLogo from "@/components/svgs/alta/AltaLogo/AltaLogo";
 import Link from "next/link";
-import Button from "./components/common/Button/Button";
-import AltaLogo from "./components/svgs/alta/AltaLogo/AltaLogo";
 import "./page.scss";
 
 export default function Home() {
