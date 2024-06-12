@@ -1,7 +1,7 @@
 import AltaCrownLine from "@/components/svgs/alta/AltaCrownLine/AltaCrownLine";
 import AltaFrame from "@/components/svgs/alta/AltaFrame/AltaFrame";
 import Arrow from "@/components/svgs/icons/Arrow/Arrow";
-import { GameContextProvider } from "@/contexts/TimerContext";
+import { GameContextProvider } from "@/contexts/GameContext";
 import Link from "next/link";
 import "./page.scss";
 

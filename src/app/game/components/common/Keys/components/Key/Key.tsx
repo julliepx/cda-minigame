@@ -1,4 +1,4 @@
-import "./key.scss";
+import "./Key.scss";
 
 interface KeyProps {
   keyboardKey: string;

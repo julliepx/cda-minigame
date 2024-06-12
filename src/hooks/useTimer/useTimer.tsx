@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 export interface Timer {
   currentTime: number;
@@ -13,18 +13,7 @@ const useTimer = (initialTime: number): Timer => {
   const [isTicking, setIsTicking] = useState(false);
   const [timesOut, setTimesOut] = useState(false);
 
-  const resetTimer = (miliseconds: number) => {
-    setIsTicking(true);
-    setTimesOut(false);
-    setCurrentTime(miliseconds ?? initialTime);
-  };
-
-  const startTimer = (miliseconds?: number): void => {
-    resetTimer(miliseconds ?? initialTime);
-    handleTimeUpdate();
-  };
-
-  const handleTimeUpdate = (): NodeJS.Timeout => {
+  const handleTimeUpdate = useMemo((): NodeJS.Timeout => {
     const tick = 25;
     const interval = setInterval(() => {
       setCurrentTime((prev) => {
@@ -40,6 +29,17 @@ const useTimer = (initialTime: number): Timer => {
     }, tick);
 
     return interval;
+  }, []);
+
+  const resetTimer = (miliseconds: number) => {
+    setIsTicking(true);
+    setTimesOut(false);
+    setCurrentTime(miliseconds ?? initialTime);
+  };
+
+  const startTimer = (miliseconds?: number): void => {
+    resetTimer(miliseconds ?? initialTime);
+    handleTimeUpdate;
   };
 
   return {

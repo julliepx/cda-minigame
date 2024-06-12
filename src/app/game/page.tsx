@@ -1,18 +1,18 @@
 "use client";
-import { useGameContext } from "@/contexts/TimerContext";
-import GameOver from "./components/steps/GameOver/GameOver";
+import { GameStatus, useGameContext } from "@/contexts/GameContext";
+import EndGame from "./components/steps/EndGame/EndGame";
 import GameRunning from "./components/steps/GameRunning/GameRunning";
 import PreGame from "./components/steps/PreGame/PreGame";
 import "./page.scss";
 
 const Game = () => {
-  const { isTicking, timesOut } = useGameContext();
+  const { status } = useGameContext();
 
-  if (isTicking) return <GameRunning />;
+  if (status === GameStatus.IDLE) return <PreGame />;
 
-  if (timesOut) return <GameOver />;
+  if (status === GameStatus.PLAYING) return <GameRunning />;
 
-  return <PreGame />;
+  return <EndGame />;
 };
 
 export default Game;

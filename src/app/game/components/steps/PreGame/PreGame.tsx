@@ -1,6 +1,6 @@
 import Button from "@/components/common/Button/Button";
 import Input from "@/components/common/Input/Input";
-import { useGameContext } from "@/contexts/TimerContext";
+import { useGameContext } from "@/contexts/GameContext";
 import "./PreGame.scss";
 
 const PreGame = () => {

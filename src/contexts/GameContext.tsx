@@ -1,17 +1,34 @@
 "use client";
 import useTimer, { Timer } from "@/hooks/useTimer/useTimer";
-import { createContext, useContext } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  createContext,
+  useContext,
+  useState,
+} from "react";
+
+export enum GameStatus {
+  IDLE,
+  PLAYING,
+  LOSE,
+  WIN,
+}
 
 export interface GameContext extends Omit<Timer, "startTimer"> {
   totalTime: number;
+  status: GameStatus;
+  setStatus: Dispatch<SetStateAction<GameStatus>>;
   startGame: () => void;
 }
 
 const GameContext = createContext<GameContext>({
   totalTime: 10000,
   currentTime: 10000,
-  isTicking: true,
   timesOut: false,
+  isTicking: true,
+  status: GameStatus.PLAYING,
+  setStatus: () => {},
   startGame: () => {},
 });
 
@@ -22,14 +39,20 @@ interface GameContextProps {
 function GameContextProvider(props: GameContextProps) {
   const totalTime = 10000;
   const { currentTime, isTicking, timesOut, startTimer } = useTimer(totalTime);
+  const [status, setStatus] = useState<GameStatus>(GameStatus.IDLE);
 
-  const startGame = () => startTimer();
+  const startGame = () => {
+    setStatus(GameStatus.PLAYING);
+    startTimer();
+  };
 
   const value: GameContext = {
     totalTime,
     currentTime,
-    isTicking,
     timesOut,
+    isTicking,
+    status,
+    setStatus,
     startGame,
   };
   return (

@@ -1,15 +1,17 @@
+import { KeyboardKey } from "@/utils/keysGenerator";
+import "./Keys.scss";
 import Key from "./components/Key/Key";
-import "./keys.scss";
 
-const Keys = () => {
+interface KeysProps {
+  keys: KeyboardKey[];
+}
+
+const Keys = ({ keys }: KeysProps) => {
   return (
     <div className="sequence">
-      <Key keyboardKey="3" />
-      <Key keyboardKey="A" />
-      <Key keyboardKey="I" />
-      <Key keyboardKey="J" />
-      <Key keyboardKey="E" />
-      <Key keyboardKey="F" />
+      {keys?.map((key, index) => (
+        <Key key={index} keyboardKey={key.code} isSuccess={key.isSuccess} />
+      ))}
     </div>
   );
 };
