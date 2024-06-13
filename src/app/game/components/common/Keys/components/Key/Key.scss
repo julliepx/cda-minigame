@@ -11,6 +11,7 @@
     color: var(--cc-white);
     background-color: var(--secondary);
     text-transform: uppercase;
+    transition: all 500ms ease;
 
     &.success {
         background-color: var(--primary);

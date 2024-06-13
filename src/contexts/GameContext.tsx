@@ -3,6 +3,7 @@ import useTimer from "@/hooks/useTimer/useTimer";
 import { GameStatus } from "@/types/gameStatus";
 import { Timer } from "@/types/timer";
 import { AUDIO_MAPPER } from "@/utils/gameAudioHandler";
+import { setRootStyleProperty } from "@/utils/styles";
 import {
   Dispatch,
   SetStateAction,
@@ -46,6 +47,8 @@ function GameContextProvider(props: GameContextProps) {
 
   useEffect(() => {
     AUDIO_MAPPER[status]();
+    setRootStyleProperty("--ticking", "var(--ticking-0)");
+    setRootStyleProperty("--tick-speed", "var(--tick-speed-0)");
   }, [status]);
 
   useEffect(() => {

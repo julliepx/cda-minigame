@@ -7,6 +7,8 @@
         border-radius: 0.25rem;
         box-shadow: inset 0 0 1.8rem 1.5rem var(--background), inset 0 0 1.8rem 1.5rem var(--background);
         background: linear-gradient(to bottom, var(--terciary) 50%, var(--primary) 100%);
+        animation: glow var(--tick-speed) infinite ease;
+        transition: all ease;
 
         .game-container {
             position: relative;
