@@ -2,6 +2,7 @@ import { useGameContext } from "@/contexts/GameContext";
 import useKeys from "@/hooks/useKeys/useKeys";
 import { GameStatus } from "@/types/gameStatus";
 import { playAudio, speedAudio } from "@/utils/audioManager";
+import { updateKeys } from "@/utils/keys";
 import { useCallback, useEffect } from "react";
 import Keys from "../../common/Keys/Keys";
 import Timer from "../../common/Timer/Timer";
@@ -14,13 +15,10 @@ const GameRunning = () => {
   const handleKeyPress = useCallback(
     (event: KeyboardEvent) => {
       const leftKeys = keys.filter((key) => !key.isSuccess);
-      const actualKey = leftKeys[0];
+      const currentKey = leftKeys[0];
 
-      if (actualKey?.code === event.key) {
-        const updatedKeys = keys.map((key) =>
-          key.code === actualKey.code ? { ...key, isSuccess: true } : key
-        );
-
+      if (currentKey?.code === event.key) {
+        const updatedKeys = updateKeys(keys, currentKey);
         setKeys(updatedKeys);
 
         if (leftKeys.length == 1) {

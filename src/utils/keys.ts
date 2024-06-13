@@ -13,3 +13,11 @@ export const generateRandomKeys = (
 
   return keys;
 };
+
+export const updateKeys = (keys: KeyboardKey[], currentKey: KeyboardKey) => {
+  return keys.map((key) =>
+    key == currentKey && key.code === currentKey.code
+      ? { ...key, isSuccess: true }
+      : key
+  );
+};

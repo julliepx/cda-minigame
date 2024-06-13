@@ -1,7 +1,7 @@
 "use client";
 
 import { KeyType, KeyboardKey } from "@/types/keys";
-import { generateRandomKeys } from "@/utils/keysGenerator";
+import { generateRandomKeys } from "@/utils/keys";
 import { useMemo, useState } from "react";
 import config from "../../../public/configs/gameConfig.json";
 
