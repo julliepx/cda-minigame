@@ -1,9 +1,4 @@
-export type Audio = "success" | "tick" | "win" | "lost" | "explosion";
-
-interface AudioConfiguration {
-  volume?: number;
-  loop?: boolean;
-}
+import { Audio, AudioConfiguration } from "../types/audio";
 
 const CONFIGS = {
   loop: false,

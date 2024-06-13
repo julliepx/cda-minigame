@@ -1,9 +1,7 @@
 "use client";
-import {
-  KeyType,
-  KeyboardKey,
-  generateRandomKeys,
-} from "@/utils/keysGenerator";
+
+import { KeyboardKey, KeyType } from "@/types/keys";
+import { generateRandomKeys } from "@/utils/keysGenerator";
 import { useMemo, useState } from "react";
 
 const useKeys = () => {

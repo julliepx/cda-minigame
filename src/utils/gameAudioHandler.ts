@@ -1,5 +1,6 @@
 import { GameStatus } from "@/types/gameStatus";
-import { Audio, playAudio, resetAudio } from "./audioManager";
+import { Audio } from "../types/audio";
+import { playAudio, resetAudio } from "./audioManager";
 
 const handleGameStatusAudio = (audio: Audio): void => {
   if (audio === "tick") {

@@ -1,12 +1,6 @@
 "use client";
+import { Timer } from "@/types/timer";
 import { useCallback, useRef, useState } from "react";
-
-export interface Timer {
-  currentTime: number;
-  isTicking: boolean;
-  timesOut: boolean;
-  startTimer: (miliseconds?: number) => void;
-}
 
 const useTimer = (initialTime: number): Timer => {
   const [currentTime, setCurrentTime] = useState(initialTime);

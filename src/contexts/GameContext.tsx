@@ -1,6 +1,7 @@
 "use client";
-import useTimer, { Timer } from "@/hooks/useTimer/useTimer";
+import useTimer from "@/hooks/useTimer/useTimer";
 import { GameStatus } from "@/types/gameStatus";
+import { Timer } from "@/types/timer";
 import { AUDIO_MAPPER } from "@/utils/gameAudioHandler";
 import {
   Dispatch,
