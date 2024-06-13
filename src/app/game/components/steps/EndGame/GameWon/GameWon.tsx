@@ -1,15 +1,19 @@
 import Button from "@/components/common/Button/Button";
 import { useGameContext } from "@/contexts/GameContext";
+import { getRandomMessage } from "@/utils/messages";
 import Link from "next/link";
+import { useMemo } from "react";
+import configs from "../../../../../../../public/configs/gameConfig.json";
 import "./GameWon.scss";
 
 const GameWon = () => {
   const { startGame } = useGameContext();
+  const message = useMemo(() => getRandomMessage(configs.messages.win), []);
 
   return (
     <>
       <div className="game">
-        <p>É disso que eu to falando, uma máquina de reflexo!</p>
+        <p>{message}</p>
       </div>
       <div className="actions">
         <Link href="/">

@@ -1,8 +1,4 @@
-export enum KeyType {
-  ALPHANUMERIC = "ALPHANUMERIC",
-  ALPHABET = "ALPHABET",
-  NUMERIC = "NUMERIC",
-}
+export type KeyType = "ALPHANUMERIC" | "ALPHABET" | "NUMERIC";
 
 export const KEYS: Record<KeyType, string> = {
   ALPHANUMERIC: "0123456789abcdefghijklmnopqrstuvwxyz",

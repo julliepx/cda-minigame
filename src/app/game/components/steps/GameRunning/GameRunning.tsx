@@ -8,7 +8,7 @@ import Timer from "../../common/Timer/Timer";
 import "./GameRunning.scss";
 
 const GameRunning = () => {
-  const { totalTime, currentTime, setStatus, timesOut } = useGameContext();
+  const { totalTime, currentTime, setStatus } = useGameContext();
   const { keys, setKeys } = useKeys();
 
   const handleKeyPress = useCallback(

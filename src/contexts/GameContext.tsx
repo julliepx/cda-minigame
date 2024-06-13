@@ -11,6 +11,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import config from "../../public/configs/gameConfig.json";
 
 export interface GameContext extends Omit<Timer, "startTimer"> {
   totalTime: number;
@@ -20,8 +21,8 @@ export interface GameContext extends Omit<Timer, "startTimer"> {
 }
 
 const GameContext = createContext<GameContext>({
-  totalTime: 10000,
-  currentTime: 10000,
+  totalTime: 10,
+  currentTime: 10,
   timesOut: false,
   isTicking: true,
   status: GameStatus.PLAYING,
@@ -34,7 +35,7 @@ interface GameContextProps {
 }
 
 function GameContextProvider(props: GameContextProps) {
-  const totalTime = 10000;
+  const totalTime = config.timeToSolve * 1000;
   const { currentTime, isTicking, timesOut, startTimer } = useTimer(totalTime);
   const [status, setStatus] = useState<GameStatus>(GameStatus.IDLE);
 

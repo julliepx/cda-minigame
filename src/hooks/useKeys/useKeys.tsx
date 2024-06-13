@@ -1,12 +1,13 @@
 "use client";
 
-import { KeyboardKey, KeyType } from "@/types/keys";
+import { KeyType, KeyboardKey } from "@/types/keys";
 import { generateRandomKeys } from "@/utils/keysGenerator";
 import { useMemo, useState } from "react";
+import config from "../../../public/configs/gameConfig.json";
 
 const useKeys = () => {
   const generatedKeys = useMemo<KeyboardKey[]>(
-    () => generateRandomKeys(KeyType.ALPHANUMERIC, 6),
+    () => generateRandomKeys(config.keyType as KeyType, config.numberOfKeys),
     []
   );
   const [keys, setKeys] = useState(generatedKeys);

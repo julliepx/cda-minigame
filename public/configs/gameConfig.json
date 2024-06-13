@@ -1,0 +1,21 @@
+{
+  "timeToSolve": 10,
+  "numberOfKeys": 6,
+  "keyType": "NUMERIC",
+  "messages": {
+    "win": [
+      "É disso que eu to falando, uma máquina de reflexo!",
+      "Eita, desse jeito eu pisquei e tu ganhou.",
+      "Quem é o Flash perto de você? Nunca nem vi.",
+      "Fala a verdade, andou treinando né?",
+      "To recém buscando a farinha e tu já ta com o bolo pronto!"
+    ],
+    "lose": [
+      "Que feio, ta precisando melhorar!",
+      "Desse jeito vai ter que fazer um bootcamp.",
+      "Só não vale chorar hein!",
+      "Acho que você ta precisando de uma ajudinha.",
+      "Ta precisando de aulas viu?"
+    ]
+  }
+}
