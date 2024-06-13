@@ -1,5 +1,6 @@
 "use client";
-import { GameStatus, useGameContext } from "@/contexts/GameContext";
+import { useGameContext } from "@/contexts/GameContext";
+import { GameStatus } from "@/types/gameStatus";
 import EndGame from "./components/steps/EndGame/EndGame";
 import GameRunning from "./components/steps/GameRunning/GameRunning";
 import PreGame from "./components/steps/PreGame/PreGame";

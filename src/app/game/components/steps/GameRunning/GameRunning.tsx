@@ -1,5 +1,7 @@
-import { GameStatus, useGameContext } from "@/contexts/GameContext";
+import { useGameContext } from "@/contexts/GameContext";
 import useKeys from "@/hooks/useKeys/useKeys";
+import { GameStatus } from "@/types/gameStatus";
+import { playAudio, speedAudio } from "@/utils/audioManager";
 import { useCallback, useEffect } from "react";
 import Keys from "../../common/Keys/Keys";
 import Timer from "../../common/Timer/Timer";
@@ -7,27 +9,41 @@ import "./GameRunning.scss";
 
 const GameRunning = () => {
   const { totalTime, currentTime, setStatus, timesOut } = useGameContext();
-  const { keys } = useKeys();
+  const { keys, setKeys } = useKeys();
 
   const handleKeyPress = useCallback(
     (event: KeyboardEvent) => {
       const leftKeys = keys.filter((key) => !key.isSuccess);
-      const actualKey = leftKeys.at(0);
+      const actualKey = leftKeys[0];
 
       if (actualKey?.code === event.key) {
-        actualKey.isSuccess = true;
+        const updatedKeys = keys.map((key) =>
+          key.code === actualKey.code ? { ...key, isSuccess: true } : key
+        );
 
-        if (leftKeys.length <= 1) {
+        setKeys(updatedKeys);
+
+        if (leftKeys.length == 1) {
           setStatus(GameStatus.WIN);
+        } else {
+          playAudio("success");
         }
-
-        return;
+      } else {
+        setStatus(GameStatus.LOSE);
       }
-
-      setStatus(GameStatus.LOSE);
     },
-    [keys, setStatus]
+    [keys, setKeys, setStatus]
   );
+
+  const updateAudioSpeed = (progress: number) => {
+    if (progress <= 25) {
+      speedAudio("tick", 4);
+    } else if (progress <= 50) {
+      speedAudio("tick", 3);
+    } else if (progress <= 75) {
+      speedAudio("tick", 2);
+    }
+  };
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyPress);
@@ -38,8 +54,9 @@ const GameRunning = () => {
   }, [handleKeyPress, keys, setStatus]);
 
   useEffect(() => {
-    if (timesOut) setStatus(GameStatus.LOSE);
-  }, [setStatus, timesOut]);
+    const progress = (currentTime / totalTime) * 100;
+    updateAudioSpeed(progress);
+  }, [currentTime, totalTime]);
 
   return (
     <>

@@ -11,9 +11,9 @@ const useKeys = () => {
     () => generateRandomKeys(KeyType.ALPHANUMERIC, 6),
     []
   );
-  const [keys] = useState(generatedKeys);
+  const [keys, setKeys] = useState(generatedKeys);
 
-  return { keys };
+  return { keys, setKeys };
 };
 
 export default useKeys;

@@ -3,6 +3,7 @@ import AltaFrame from "@/components/svgs/alta/AltaFrame/AltaFrame";
 import Arrow from "@/components/svgs/icons/Arrow/Arrow";
 import { GameContextProvider } from "@/contexts/GameContext";
 import Link from "next/link";
+import AudioHandler from "./components/common/AudioHandler/AudioHandler";
 import "./page.scss";
 
 const GameLayout = ({
@@ -15,6 +16,7 @@ const GameLayout = ({
       <main className="game-container">
         <h1 className="title">Alta Flash</h1>
         <GameContextProvider>{children}</GameContextProvider>
+        <AudioHandler />
         <AltaCrownLine />
         <AltaFrame />
       </main>

@@ -1,19 +1,15 @@
 "use client";
 import useTimer, { Timer } from "@/hooks/useTimer/useTimer";
+import { GameStatus } from "@/types/gameStatus";
+import { AUDIO_MAPPER } from "@/utils/gameAudioHandler";
 import {
   Dispatch,
   SetStateAction,
   createContext,
   useContext,
+  useEffect,
   useState,
 } from "react";
-
-export enum GameStatus {
-  IDLE,
-  PLAYING,
-  LOSE,
-  WIN,
-}
 
 export interface GameContext extends Omit<Timer, "startTimer"> {
   totalTime: number;
@@ -45,6 +41,15 @@ function GameContextProvider(props: GameContextProps) {
     setStatus(GameStatus.PLAYING);
     startTimer();
   };
+
+  useEffect(() => {
+    AUDIO_MAPPER[status]();
+  }, [status]);
+
+  useEffect(() => {
+    if (timesOut && status === GameStatus.PLAYING)
+      setStatus(GameStatus.TIMES_UP);
+  }, [status, timesOut]);
 
   const value: GameContext = {
     totalTime,

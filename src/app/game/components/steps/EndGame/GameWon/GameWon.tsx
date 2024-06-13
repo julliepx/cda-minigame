@@ -1,9 +1,10 @@
 import Button from "@/components/common/Button/Button";
-import { GameStatus, useGameContext } from "@/contexts/GameContext";
+import { useGameContext } from "@/contexts/GameContext";
+import Link from "next/link";
 import "./GameWon.scss";
 
 const GameWon = () => {
-  const { startGame, setStatus } = useGameContext();
+  const { startGame } = useGameContext();
 
   return (
     <>
@@ -11,11 +12,9 @@ const GameWon = () => {
         <p>É disso que eu to falando, uma máquina de reflexo!</p>
       </div>
       <div className="actions">
-        <Button
-          title="SAIR"
-          className="quit-button"
-          onClick={() => setStatus(GameStatus.IDLE)}
-        />
+        <Link href="/">
+          <Button title="SAIR" className="quit-button" />
+        </Link>
         <Button
           title="JOGAR NOVAMENTE"
           className="play-button"

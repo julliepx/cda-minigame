@@ -8,7 +8,7 @@ const almarai = Almarai({
 });
 
 export const metadata: Metadata = {
-  title: "Cidade Alta Minigame",
+  title: "Alta Flash",
   description: "A minigame where the player has to be faster than The Flash.",
 };
 

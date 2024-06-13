@@ -1,4 +1,5 @@
-import { GameStatus, useGameContext } from "@/contexts/GameContext";
+import { useGameContext } from "@/contexts/GameContext";
+import { GameStatus } from "@/types/gameStatus";
 import GameLost from "./GameLost/GameLost";
 import GameWon from "./GameWon/GameWon";
 
