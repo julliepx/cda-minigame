@@ -9,8 +9,8 @@
     }
 
     .quit-button {
-        background-color: rgb(22, 25, 38);
-        color: #FFFFFF;
+        background-color: var(--secondary);
+        color: var(--cc-white);
         letter-spacing: 0.055rem;
         padding: 1rem 2.5rem;
 
@@ -20,8 +20,8 @@
     }
 
     .play-button {
-        background-color: rgb(255, 192, 70);
-        color: rgb(22, 25, 38);
+        background-color: var(--primary);
+        color: var(--secondary);
         letter-spacing: 0.055rem;
         padding: 1rem 2.5rem;
 

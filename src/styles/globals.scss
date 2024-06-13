@@ -1,4 +1,5 @@
 @import './animations.scss';
+@import './variables.scss';
 
 * {
   box-sizing: border-box;
@@ -14,8 +15,8 @@ body {
 }
 
 body {
-  color: rgb(227, 227, 230);
-  background: rgb(17, 19, 29);
+  color: var(--cc-white);
+  background: var(--background);
 }
 
 a {

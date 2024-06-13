@@ -3,18 +3,18 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.25rem;
-    border: 0.0625rem solid #FFFFFF;
+    border: 0.0625rem solid var(--cc-white);
     width: 3rem;
     height: 3rem;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #FFFFFF;
-    background-color: rgb(28, 31, 43);
+    color: var(--cc-white);
+    background-color: var(--secondary);
     text-transform: uppercase;
 
     &.success {
-        background-color: rgb(255, 192, 70);
-        border-color: rgb(255, 192, 70);
-        color: rgb(28, 31, 43);
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: var(--secondary);
     }
 }

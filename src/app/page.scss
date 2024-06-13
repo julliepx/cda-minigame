@@ -22,7 +22,7 @@
             font-weight: 800;
             text-align: center;
             letter-spacing: -0.25rem;
-            text-shadow: 0 0 4rem rgb(17, 19, 29);
+            text-shadow: 0 0 4rem var(--background);
             animation: fadeInUpwards 2000ms ease-in-out;
 
             span {
@@ -65,11 +65,11 @@
         .prove-button {
             width: 25rem;
             margin: 0 auto;
-            background: rgb(255, 192, 70);
+            background: var(--primary);
             letter-spacing: 0.5rem;
             padding: 0.875rem 0;
             font-weight: 800;
-            color: rgb(0, 0, 0);
+            color: var(--cc-black);
             font-size: 0.875rem;
             animation: scaleUpSideways 2000ms ease-in-out;
 
@@ -91,7 +91,7 @@
             scale: 0.95;
 
             path {
-                fill: #FFC046;
+                fill: var(--primary);
             }
         }
     }

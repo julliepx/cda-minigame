@@ -6,8 +6,8 @@
         justify-content: center;
         align-items: center;
         width: 34.5rem;
-        background: rgb(17, 19, 30);
-        border: 0.0625rem solid rgb(255, 192, 70);
+        background: var(--background);
+        border: 0.0625rem solid var(--primary);
         padding: 2.5rem 0;
         gap: 1.5rem;
 
@@ -25,7 +25,7 @@
                 text-align: end;
                 font-size: 0.875rem;
                 margin-top: 0.25rem;
-                color: rgb(45, 48, 70);
+                color: var(--dark-highlight);
             }
 
         }
