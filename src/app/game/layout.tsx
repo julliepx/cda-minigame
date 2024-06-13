@@ -13,13 +13,15 @@ const GameLayout = ({
 }>) => {
   return (
     <section className="page game-page">
-      <main className="game-container">
-        <h1 className="title">Alta Flash</h1>
-        <GameContextProvider>{children}</GameContextProvider>
-        <AudioHandler />
-        <AltaCrownLine />
-        <AltaFrame />
-      </main>
+      <div className="box-shadow">
+        <main className="game-container">
+          <h1 className="title">Alta Flash</h1>
+          <GameContextProvider>{children}</GameContextProvider>
+          <AudioHandler />
+          <AltaCrownLine />
+          <AltaFrame />
+        </main>
+      </div>
       <Link href={"/"}>
         <Arrow />
       </Link>
