@@ -6,7 +6,7 @@ import GameRunning from "./components/steps/GameRunning/GameRunning";
 import PreGame from "./components/steps/PreGame/PreGame";
 import "./page.scss";
 
-const Game = () => {
+const GamePage = () => {
   const { status } = useGameContext();
 
   if (status === GameStatus.IDLE) return <PreGame />;
@@ -16,4 +16,4 @@ const Game = () => {
   return <EndGame />;
 };
 
-export default Game;
+export default GamePage;

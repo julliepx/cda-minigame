@@ -1,6 +1,8 @@
 "use client";
 
+import RankingIcon from "@/components/svgs/icons/RankingIcon/RankingIcon";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const AnimationTemplate = ({
@@ -20,6 +22,9 @@ const AnimationTemplate = ({
         transition={{ duration: 3, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
+        <Link className="ranking-button" href={"/ranking"}>
+          <RankingIcon />
+        </Link>
       </motion.div>
     </AnimatePresence>
   );

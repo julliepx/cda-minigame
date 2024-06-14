@@ -1,0 +1,66 @@
+.ranking-position {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1rem;
+    background: var(--secondary);
+    height: 4.5rem;
+    letter-spacing: 0.1rem;
+
+    &:hover {
+        scale: 0.98;
+    }
+
+    svg {
+        width: 102%;
+        height: 108%;
+        position: absolute;
+
+        path {
+            fill: var(--dark-highlight);
+        }
+    }
+
+    .rotate {
+        transform: rotate(180deg);
+    }
+
+    .position {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 4rem;
+        font-weight: 700;
+        padding-bottom: 0.5rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4rem;
+            height: 4rem;
+            background: url('https://cidadealtarp.com/images/symbols/step-border.svg') center center / contain no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+    }
+
+    .username {
+        width: 12rem;
+        text-transform: uppercase;
+    }
+
+    .time {
+        text-align: end;
+        width: 6rem;
+        padding-right: 1rem;
+    }
+}

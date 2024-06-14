@@ -4,7 +4,7 @@ import AltaLogo from "@/components/svgs/alta/AltaLogo/AltaLogo";
 import Link from "next/link";
 import "./page.scss";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section className="page home-page">
       <div className="background"></div>
