@@ -2,7 +2,8 @@
     .background {
         position: absolute;
         width: 110vw;
-        height: 100vh;
+        height: 120vh;
+        top: 0;
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
@@ -78,21 +79,21 @@
             }
         }
     }
+}
 
-    .cda-logo {
-        position: fixed;
-        width: 4rem;
-        height: 4rem;
-        bottom: 1rem;
-        left: 1rem;
-        transition: all 200ms;
+.alta-logo {
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 1rem;
+    left: 1rem;
+    transition: all 200ms;
 
-        &:hover {
-            scale: 0.95;
+    &:hover {
+        scale: 0.95;
 
-            path {
-                fill: var(--primary);
-            }
+        path {
+            fill: var(--primary);
         }
     }
 }
@@ -105,5 +106,112 @@
     svg {
         width: 4rem;
         height: 4rem;
+    }
+
+    &:hover {
+        scale: 0.95;
+
+        path {
+            fill: var(--primary);
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .home-page {
+        .main {
+            .title {
+                font-size: 3.5rem;
+
+                .o::before {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .crown::before {
+                    width: 30px;
+                    height: 35px;
+                    top: -20px;
+                    right: -15px;
+                }
+
+                .arrow-right::before {
+                    height: 30px;
+                    right: -50px;
+                }
+            }
+
+            .prove-button {
+                width: 20rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .home-page {
+        .main {
+            .title {
+                font-size: 2.5rem;
+
+                .o::before {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .crown::before {
+                    width: 30px;
+                    height: 35px;
+                    top: -20px;
+                    right: -15px;
+                }
+
+                .arrow-right::before {
+                    height: 30px;
+                    right: -50px;
+                }
+            }
+
+            .prove-button {
+                width: 14rem;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page {
+        .main {
+            .title {
+                font-size: 1.8rem;
+                letter-spacing: -0.05rem;
+
+                .o::before {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .crown::before {
+                    width: 20px;
+                    height: 25px;
+                    top: -15px;
+                    right: -10px;
+                }
+
+                .arrow-right::before {
+                    width: 100px;
+                    height: 20px;
+                    right: -20px;
+                }
+            }
+
+            .prove-button {
+                width: 12rem;
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+        }
     }
 }

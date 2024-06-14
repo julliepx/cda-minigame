@@ -15,7 +15,7 @@ export const updateRanking = (currentTime: number, totalTime: number) => {
 
   const newRecord = -(currentTime - totalTime);
   const newUser: RankingUser = {
-    username: username ?? "",
+    username: username && username != "" ? username : "Fulaninho",
     record: newRecord,
   };
 

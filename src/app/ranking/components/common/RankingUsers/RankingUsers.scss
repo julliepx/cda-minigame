@@ -8,6 +8,7 @@
     background: var(--secondary);
     height: 4.5rem;
     letter-spacing: 0.1rem;
+    animation: fadeInUpwards 2000ms ease-in-out;
 
     &:hover {
         scale: 0.98;

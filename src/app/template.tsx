@@ -4,6 +4,8 @@ import RankingIcon from "@/components/svgs/icons/RankingIcon/RankingIcon";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AltaLogo from "../components/svgs/alta/AltaLogo/AltaLogo";
+import "./page.scss";
 
 const AnimationTemplate = ({
   children,
@@ -22,8 +24,17 @@ const AnimationTemplate = ({
         transition={{ duration: 3, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
-        <Link className="ranking-button" href={"/ranking"}>
-          <RankingIcon />
+        {pathname !== "/ranking" && (
+          <Link className="ranking-button" href={"/ranking"}>
+            <RankingIcon />
+          </Link>
+        )}
+        <Link
+          className="alta-logo"
+          href="https://cidadealtarp.com/"
+          target="_blank"
+        >
+          <AltaLogo />
         </Link>
       </motion.div>
     </AnimatePresence>

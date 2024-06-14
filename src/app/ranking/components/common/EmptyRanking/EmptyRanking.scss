@@ -1,0 +1,81 @@
+.empty-ranking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 70vw;
+    animation: fadeInUpwards 2000ms ease-in-out;
+
+    .empty-title {
+        font-size: 5.5rem;
+        font-weight: 800;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        text-shadow: 0 0 4rem var(--background);
+    }
+
+    .button-container {
+        width: fit-content;
+
+        .empty-button {
+            background-color: var(--primary);
+            color: var(--cc-black);
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: 0.055rem;
+            padding: 1.5rem 4.5rem;
+
+            &:hover {
+                scale: 0.95;
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .empty-ranking {
+        .empty-title {
+            font-size: 3.5rem;
+        }
+
+        .button-container {
+            .empty-button {
+                font-size: 1.5rem;
+                padding: 1rem 3.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .empty-ranking {
+        .empty-title {
+            font-size: 2.5rem;
+        }
+
+        .button-container {
+            .empty-button {
+                font-size: 1rem;
+                padding: 1rem 2.5rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .empty-ranking {
+        .empty-title {
+            font-size: 1.5rem;
+        }
+
+        .button-container {
+            .empty-button {
+                font-size: 0.875rem;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+
+}

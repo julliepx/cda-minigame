@@ -1,6 +1,5 @@
 "use client";
 import Button from "@/components/common/Button/Button";
-import AltaLogo from "@/components/svgs/alta/AltaLogo/AltaLogo";
 import Link from "next/link";
 import "./page.scss";
 
@@ -18,9 +17,6 @@ export default function HomePage() {
           <Button title="PROVE" className="prove-button" />
         </Link>
       </main>
-      <Link href="https://cidadealtarp.com/" target="_blank">
-        <AltaLogo />
-      </Link>
     </section>
   );
 }

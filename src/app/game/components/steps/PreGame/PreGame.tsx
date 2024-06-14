@@ -13,7 +13,7 @@ const PreGame = () => {
   const [username, setUsername] = useState("");
 
   const start = () => {
-    username && setItemToLocalStorage(LOCAL_STORAGE_KEYS.username, username);
+    setItemToLocalStorage(LOCAL_STORAGE_KEYS.username, username);
     startGame();
   };
 
@@ -24,6 +24,7 @@ const PreGame = () => {
           id="username"
           label="Nome de Usuário:"
           placeholder="Digite aqui..."
+          maxLength={16}
           value={username}
           onChange={(v) => setUsername(v.currentTarget.value)}
         />

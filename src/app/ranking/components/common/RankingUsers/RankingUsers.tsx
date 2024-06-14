@@ -7,6 +7,7 @@ import {
 } from "@/utils/localStorageManager";
 import { Qwitcher_Grypen } from "next/font/google";
 import { useEffect, useState } from "react";
+import EmptyRanking from "../EmptyRanking/EmptyRanking";
 import "./RankingUsers.scss";
 
 const corinthia = Qwitcher_Grypen({
@@ -25,6 +26,8 @@ const RankingUsers = () => {
   }, []);
 
   const orderedRanking = ranking?.users.sort((a, b) => a.record - b.record);
+
+  if (!ranking || !ranking.users) return <EmptyRanking />;
 
   return (
     <>
