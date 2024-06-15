@@ -1,9 +1,9 @@
 import { useGameContext } from "@/contexts/GameContext";
 import useKeys from "@/hooks/useKeys/useKeys";
 import { GameStatus } from "@/types/gameStatus";
-import { playAudio, speedAudio } from "@/utils/audioManager";
+import { playAudio } from "@/utils/audioManager";
+import { AUDIO_SPEED_MAPPER } from "@/utils/gameAudioHandler";
 import { updateKeys } from "@/utils/keys";
-import { setRootStyleProperty } from "@/utils/styles";
 import { useCallback, useEffect } from "react";
 import Keys from "../../common/Keys/Keys";
 import Timer from "../../common/Timer/Timer";
@@ -18,7 +18,7 @@ const GameRunning = () => {
       const leftKeys = keys.filter((key) => !key.isSuccess);
       const currentKey = leftKeys[0];
 
-      if (currentKey?.code === event.key) {
+      if (currentKey?.code.toLowerCase() === event.key.toLowerCase()) {
         const updatedKeys = updateKeys(keys, currentKey);
         setKeys(updatedKeys);
 
@@ -35,19 +35,7 @@ const GameRunning = () => {
   );
 
   const updateAudioSpeed = (progress: number) => {
-    if (progress <= 25) {
-      speedAudio("tick", 4);
-      setRootStyleProperty("--ticking", "var(--ticking-75)");
-      setRootStyleProperty("--tick-speed", "var(--tick-speed-75)");
-    } else if (progress <= 50) {
-      speedAudio("tick", 3);
-      setRootStyleProperty("--ticking", "var(--ticking-50)");
-      setRootStyleProperty("--tick-speed", "var(--tick-speed-50)");
-    } else if (progress <= 75) {
-      speedAudio("tick", 2);
-      setRootStyleProperty("--ticking", "var(--ticking-25)");
-      setRootStyleProperty("--tick-speed", "var(--tick-speed-25)");
-    }
+    if ([25, 50, 75].includes(progress)) AUDIO_SPEED_MAPPER[progress]();
   };
 
   useEffect(() => {
