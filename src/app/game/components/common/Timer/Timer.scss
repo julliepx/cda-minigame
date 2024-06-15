@@ -1,13 +1,28 @@
-.timer {
-    width: 100%;
-    height: 0.5rem;
-    border-radius: 1rem;
-    background-color: var(--secondary);
+.timer-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5rem;
 
-    .current-time {
-        height: inherit;
-        border-radius: inherit;
-        background-color: var(--primary);
-        transition: all ease;
+    .timer {
+        width: 100%;
+        height: 0.5rem;
+        border-radius: 1rem;
+        background-color: var(--secondary);
+
+        .current-time {
+            height: inherit;
+            border-radius: inherit;
+            background-color: var(--primary);
+            transition: all ease;
+        }
+    }
+
+    .hints {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: var(--terciary);
+        letter-spacing: 0.05rem;
     }
 }
