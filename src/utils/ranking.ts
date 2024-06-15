@@ -6,16 +6,19 @@ import {
 } from "./localStorageManager";
 
 export const updateRanking = (currentTime: number, totalTime: number) => {
-  const username: string | null = getItemFromLocalStorage(
+  const currentUsername: string | null = getItemFromLocalStorage(
     LOCAL_STORAGE_KEYS.username
   );
   let currentRanking: Ranking | null = getItemFromLocalStorage(
     LOCAL_STORAGE_KEYS.ranking
   );
 
+  const username =
+    currentUsername && currentUsername != "" ? currentUsername : "Fulaninho";
+
   const newRecord = -(currentTime - totalTime);
   const newUser: RankingUser = {
-    username: username && username != "" ? username : "Fulaninho",
+    username: username,
     record: newRecord,
   };
 

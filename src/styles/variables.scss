@@ -9,16 +9,18 @@
 
     --text-primary: rgb(227, 227, 230);
 
-    --tick-speed: 1500ms;
-    --tick-speed-0: 1250ms;
-    --tick-speed-25: 1000ms;
-    --tick-speed-50: 750ms;
-    --tick-speed-75: 500ms;
-    --ticking: rgb(255, 192, 70);
-    --ticking-0: rgb(255, 192, 70);
-    --ticking-25: rgb(255, 115, 0);
-    --ticking-50: rgb(250, 58, 0);
-    --ticking-75: rgb(255, 0, 0);
+    --tick-speed: 1000ms;
+    --tick-speed-0: 1000ms;
+    --tick-speed-25: 600ms;
+    --tick-speed-50: 400ms;
+    --tick-speed-75: 250ms;
+    --ticking-color: rgb(255, 192, 70);
+    --ticking-color-0: rgb(255, 192, 70);
+    --ticking-color-25: rgb(255, 115, 0);
+    --ticking-color-50: rgb(250, 58, 0);
+    --ticking-color-75: rgb(255, 0, 0);
+    --ticking-color-win: rgb(0, 255, 98);
+    --ticking-color-lose: rgb(255, 0, 0);
 
     --cc-black: rgb(0, 0, 0);
     --cc-white: rgb(255, 255, 255);

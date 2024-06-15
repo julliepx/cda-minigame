@@ -9,7 +9,9 @@ const EndGame = () => {
   const { status, currentTime, totalTime } = useGameContext();
 
   useEffect(() => {
-    updateRanking(currentTime, totalTime);
+    if (status === GameStatus.WIN) {
+      updateRanking(currentTime, totalTime);
+    }
   }, []);
 
   if (status === GameStatus.WIN) return <GameWon />;
