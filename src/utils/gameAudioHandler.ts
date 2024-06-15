@@ -1,4 +1,4 @@
-import { GameStatus } from "@/types/gameStatus";
+import { GameStatus } from "@/types/game";
 import { Audio } from "../types/audio";
 import { playAudio, resetAudio, speedAudio } from "./audioManager";
 import { setRootStyleProperty } from "./styles";

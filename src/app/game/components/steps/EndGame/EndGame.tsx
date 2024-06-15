@@ -1,5 +1,5 @@
 import { useGameContext } from "@/contexts/GameContext";
-import { GameStatus } from "@/types/gameStatus";
+import { GameStatus } from "@/types/game";
 import { updateRanking } from "@/utils/ranking";
 import { useEffect } from "react";
 import GameLost from "./GameLost/GameLost";

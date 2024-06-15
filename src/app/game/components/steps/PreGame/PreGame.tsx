@@ -1,6 +1,8 @@
 import Button from "@/components/common/Button/Button";
 import Input from "@/components/common/Input/Input";
+import Select from "@/components/common/Select/Select";
 import { useGameContext } from "@/contexts/GameContext";
+import { GameDifficulty, GameMode } from "@/types/game";
 import {
   LOCAL_STORAGE_KEYS,
   setItemToLocalStorage,
@@ -19,7 +21,7 @@ const PreGame = () => {
 
   return (
     <>
-      <div className="username-container">
+      <div className="configurations-container">
         <Input
           id="username"
           label="Nome de Usuário:"
@@ -27,10 +29,24 @@ const PreGame = () => {
           maxLength={16}
           value={username}
           onChange={(v) => setUsername(v.currentTarget.value)}
+          hint="O usuário será utilizado apenas para fins da exibição de ranking*"
         />
-        <span>
-          O usuário será utilizado apenas para fins da exibição de ranking*
-        </span>
+        <div className="configurations">
+          <Select name="gameMode" id="gameMode">
+            {Object.entries(GameMode).map(([key, mode]) => (
+              <option key={mode} value={key}>
+                {mode}
+              </option>
+            ))}
+          </Select>
+          <Select name="difficulty" id="difficulty">
+            {Object.entries(GameDifficulty).map(([key, difficulty]) => (
+              <option key={difficulty} value={key}>
+                {difficulty}
+              </option>
+            ))}
+          </Select>
+        </div>
       </div>
       <Button
         title="INICIAR"

@@ -1,6 +1,6 @@
 import { useGameContext } from "@/contexts/GameContext";
 import useKeys from "@/hooks/useKeys/useKeys";
-import { GameStatus } from "@/types/gameStatus";
+import { GameStatus } from "@/types/game";
 import { playAudio } from "@/utils/audioManager";
 import { AUDIO_SPEED_MAPPER } from "@/utils/gameAudioHandler";
 import { updateKeys } from "@/utils/keys";

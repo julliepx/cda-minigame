@@ -1,4 +1,4 @@
-import { GameStatus } from "@/types/gameStatus";
+import { GameStatus } from "@/types/game";
 import { setRootStyleProperty } from "./styles";
 
 const handleGameStatusColor = (color: string): void => {

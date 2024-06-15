@@ -27,20 +27,6 @@
                 font-size: 2.5rem;
                 letter-spacing: 0.07em;
             }
-
-            .username-container {
-                display: flex;
-                flex-direction: column;
-                width: 90%;
-
-                span {
-                    text-align: end;
-                    font-size: 0.875rem;
-                    margin-top: 0.25rem;
-                    color: var(--dark-highlight);
-                }
-
-            }
         }
     }
 }

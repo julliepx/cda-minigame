@@ -1,3 +1,16 @@
+.configurations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+
+    .configurations {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+}
+
 .start-button {
     background-color: var(--primary);
     color: var(--cc-white);
