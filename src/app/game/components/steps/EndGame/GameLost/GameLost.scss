@@ -1,12 +1,32 @@
-.restart-button {
-    background-color: var(--primary);
-    color: var(--cc-white);
-    font-weight: 500;
-    font-size: 1.5rem;
-    letter-spacing: 0.055rem;
-    padding: 1rem 2.5rem;
+.lost-actions {
+    display: flex;
+    gap: 1rem;
 
-    &:hover {
-        scale: 0.95;
+    .quit-button,
+    .restart-button {
+        font-size: 1rem !important;
+        font-weight: 600;
+    }
+
+    .quit-button {
+        background-color: var(--secondary);
+        color: var(--cc-white);
+        letter-spacing: 0.055rem;
+        padding: 1rem 2.5rem;
+
+        &:hover {
+            scale: 0.95;
+        }
+    }
+
+    .restart-button {
+        background-color: var(--primary);
+        color: var(--secondary);
+        letter-spacing: 0.055rem;
+        padding: 1rem 2.5rem;
+
+        &:hover {
+            scale: 0.95;
+        }
     }
 }

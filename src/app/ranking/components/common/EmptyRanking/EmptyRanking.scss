@@ -5,10 +5,11 @@
     align-items: center;
     gap: 2rem;
     width: 70vw;
+    height: 100%;
     animation: fadeInUpwards 2000ms ease-in-out;
 
     .empty-title {
-        font-size: 5.5rem;
+        font-size: 3rem;
         font-weight: 800;
         text-align: center;
         letter-spacing: 0.1rem;
@@ -22,7 +23,7 @@
             background-color: var(--primary);
             color: var(--cc-black);
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.5rem;
             letter-spacing: 0.055rem;
             padding: 1.5rem 4.5rem;
 
@@ -58,22 +59,6 @@
             .empty-button {
                 font-size: 1rem;
                 padding: 1rem 2.5rem;
-            }
-        }
-    }
-
-}
-
-@media (max-width: 600px) {
-    .empty-ranking {
-        .empty-title {
-            font-size: 1.5rem;
-        }
-
-        .button-container {
-            .empty-button {
-                font-size: 0.875rem;
-                padding: 1rem 2rem;
             }
         }
     }

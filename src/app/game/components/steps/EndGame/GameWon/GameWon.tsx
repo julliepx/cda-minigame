@@ -15,14 +15,14 @@ const GameWon = () => {
       <div className="game">
         <p>{message}</p>
       </div>
-      <div className="actions">
+      <div className="win-actions">
         <Link href="/">
           <Button title="SAIR" className="quit-button" />
         </Link>
         <Button
           title="JOGAR NOVAMENTE"
           className="play-button"
-          onClick={startGame}
+          onClick={() => startGame()}
         />
       </div>
     </>

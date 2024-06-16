@@ -180,38 +180,3 @@
         }
     }
 }
-
-@media (max-width: 600px) {
-    .home-page {
-        .main {
-            .title {
-                font-size: 1.8rem;
-                letter-spacing: -0.05rem;
-
-                .o::before {
-                    width: 25px;
-                    height: 25px;
-                }
-
-                .crown::before {
-                    width: 20px;
-                    height: 25px;
-                    top: -15px;
-                    right: -10px;
-                }
-
-                .arrow-right::before {
-                    width: 100px;
-                    height: 20px;
-                    right: -20px;
-                }
-            }
-
-            .prove-button {
-                width: 12rem;
-                font-size: 0.75rem;
-                padding: 0.5rem;
-            }
-        }
-    }
-}

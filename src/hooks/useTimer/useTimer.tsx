@@ -9,7 +9,7 @@ const useTimer = (initialTime: number): Timer => {
   const interval = useRef<NodeJS.Timeout | null>(null);
 
   const handleTimeUpdate = useCallback((): NodeJS.Timeout => {
-    const tick = 25;
+    const tick = 10;
     const interval = setInterval(() => {
       setCurrentTime((prev) => {
         if (prev <= tick) {

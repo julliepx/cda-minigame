@@ -1,20 +1,31 @@
 import { useGameContext } from "@/contexts/GameContext";
-import { GameStatus } from "@/types/game";
+import { GameMode, GameStatus } from "@/types/game";
 import { updateRanking } from "@/utils/ranking";
 import { useEffect } from "react";
+import GameRunning from "../GameRunning/GameRunning";
 import GameLost from "./GameLost/GameLost";
 import GameWon from "./GameWon/GameWon";
 
 const EndGame = () => {
-  const { status, currentTime, totalTime } = useGameContext();
+  const { status, currentTime, totalTime, mode, startGame, setNumberOfKeys } =
+    useGameContext();
 
   useEffect(() => {
     if (status === GameStatus.WIN) {
       updateRanking(currentTime, totalTime);
+
+      if (mode === GameMode.LEVELS) {
+        setNumberOfKeys((keys) => keys + 2);
+        startGame(totalTime - 1000);
+      }
     }
   }, []);
 
-  if (status === GameStatus.WIN) return <GameWon />;
+  if (status === GameStatus.WIN && mode == GameMode.LEVELS)
+    return <GameRunning />;
+
+  if (status === GameStatus.WIN && mode === GameMode.DEFAULT)
+    return <GameWon />;
 
   return <GameLost />;
 };

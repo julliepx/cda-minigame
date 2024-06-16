@@ -1,7 +1,32 @@
 {
-  "timeToSolve": 10,
-  "numberOfKeys": 6,
   "keyType": "NUMERIC",
+  "difficulties": [
+    {
+      "difficulty": "EASY",
+      "timeToSolve": 10,
+      "numberOfKeys": 6
+    },
+    {
+      "difficulty": "MEDIUM",
+      "timeToSolve": 8,
+      "numberOfKeys": 7
+    },
+    {
+      "difficulty": "HARD",
+      "timeToSolve": 6,
+      "numberOfKeys": 8
+    },
+    {
+      "difficulty": "IMPOSSIBLE",
+      "timeToSolve": 4,
+      "numberOfKeys": 9
+    },
+    {
+      "difficulty": "FLASH",
+      "timeToSolve": 2,
+      "numberOfKeys": 10
+    }
+  ],
   "messages": {
     "win": [
       "É disso que eu to falando, uma máquina de reflexo!",

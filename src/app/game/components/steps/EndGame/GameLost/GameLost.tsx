@@ -1,12 +1,13 @@
 import Button from "@/components/common/Button/Button";
 import { useGameContext } from "@/contexts/GameContext";
 import { getRandomMessage } from "@/utils/messages";
+import Link from "next/link";
 import { useMemo } from "react";
 import configs from "../../../../../../../public/configs/gameConfig.json";
 import "./GameLost.scss";
 
 const GameLost = () => {
-  const { startGame } = useGameContext();
+  const { resetGame } = useGameContext();
   const message = useMemo(() => getRandomMessage(configs.messages.lose), []);
 
   return (
@@ -14,12 +15,16 @@ const GameLost = () => {
       <div className="game">
         <p>{message}</p>
       </div>
-      <Button
-        title="TENTAR NOVAMENTE"
-        hasFrame
-        className="restart-button"
-        onClick={startGame}
-      />
+      <div className="lost-actions">
+        <Link href="/">
+          <Button title="SAIR" className="quit-button" />
+        </Link>
+        <Button
+          title="TENTAR NOVAMENTE"
+          className="restart-button"
+          onClick={() => resetGame()}
+        />
+      </div>
     </>
   );
 };
