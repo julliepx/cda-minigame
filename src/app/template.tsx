@@ -1,5 +1,6 @@
 "use client";
 
+import Arrow from "@/components/svgs/icons/Arrow/Arrow";
 import RankingIcon from "@/components/svgs/icons/RankingIcon/RankingIcon";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -27,6 +28,11 @@ const AnimationTemplate = ({
         {pathname !== "/ranking" && (
           <Link className="ranking-button" href={"/ranking"}>
             <RankingIcon />
+          </Link>
+        )}
+        {pathname !== "/" && (
+          <Link href={"/"}>
+            <Arrow />
           </Link>
         )}
         <Link

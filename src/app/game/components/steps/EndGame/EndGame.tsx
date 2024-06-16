@@ -19,6 +19,7 @@ const EndGame = () => {
         startGame(totalTime - 1000);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (status === GameStatus.WIN && mode == GameMode.LEVELS)

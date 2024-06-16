@@ -42,11 +42,11 @@ const GameContext = createContext<GameContext>({
   currentTime: config.difficulties[0].timeToSolve,
   timesOut: false,
   isTicking: true,
-  status: GameStatus.PLAYING,
+  status: GameStatus.IDLE,
   setStatus: () => {},
   mode: GameMode.DEFAULT,
   setMode: () => {},
-  difficulty: GameDifficulty.MEDIUM,
+  difficulty: GameDifficulty.EASY,
   setDifficulty: () => {},
   level: 1,
   setLevel: () => {},
@@ -82,6 +82,7 @@ function GameContextProvider(props: GameContextProps) {
       setTotalTime(time ?? totalTime);
       startTimer(time);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [startTimer]
   );
 
@@ -94,6 +95,7 @@ function GameContextProvider(props: GameContextProps) {
     setTotalTime(time);
     startTimer(time);
     setNumberOfKeys(configDifficulty.numberOfKeys);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startTimer]);
 
   useEffect(() => {

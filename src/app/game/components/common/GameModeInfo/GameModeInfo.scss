@@ -1,0 +1,46 @@
+.modes-explanation {
+    position: relative;
+    padding: 1.5rem;
+    margin-top: 2.2rem;
+    width: 20rem;
+    height: 25.5rem;
+    transition: all 250ms ease;
+
+    .sections-wrapper {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 2rem;
+        padding-right: 1rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .title {
+                color: var(--primary);
+                letter-spacing: 0.05rem;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                list-style: none;
+
+                li {
+                    span {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0.25rem;
+        }
+    }
+}
