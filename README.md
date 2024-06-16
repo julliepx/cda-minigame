@@ -2,6 +2,13 @@
 
 Assim como o nome já induz, o **AltaFlash** é um game onde o desafio é bater a velocidade da luz, e para isso o jogador precisa pressionar sequências de teclas na ordem de aparição o mais rápido que conseguir.
 
+![](https://img.shields.io/badge/Next_JS-000000?style=for-the-badge&logo=next.js)
+![](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react)
+![](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript)
+![](https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5)
+![](https://img.shields.io/badge/SCSS-000000?style=for-the-badge&logo=sass)
+![](https://img.shields.io/badge/Framer_Motion-000000?style=for-the-badge&logo=framer)
+
 ## Funcionalidades
 
 - **Modos de Jogo:** o jogo atualmente conta com dois modos de jogo, um onde o jogador é o seu próprio dono e pode escolher a dificuldade que mais lhe agrada, e outro onde suas habilidades de reflexo são colocadas a prova com sequências desafiadoras.
