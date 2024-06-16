@@ -1,4 +1,4 @@
-import { KeyboardKey } from "@/utils/keysGenerator";
+import { KeyboardKey } from "../../../../../types/keys";
 import "./Keys.scss";
 import Key from "./components/Key/Key";
 

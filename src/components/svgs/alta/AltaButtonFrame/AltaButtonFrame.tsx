@@ -1,5 +1,5 @@
 import { HTMLProps } from "react";
-import "./altaButtonFrame.scss";
+import "./AltaButtonFrame.scss";
 
 const AltaButtonFrame = (props: HTMLProps<SVGSVGElement>) => {
   return (

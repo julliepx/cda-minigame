@@ -1,4 +1,4 @@
-import "./altaCrownLine.scss";
+import "./AltaCrownLine.scss";
 
 const AltaCrownLine = () => {
   return (

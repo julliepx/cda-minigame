@@ -1,4 +1,4 @@
-import "./arrow.scss";
+import "./Arrow.scss";
 
 interface ArrowProps {
   direction?: "top" | "right" | "bottom" | "left";

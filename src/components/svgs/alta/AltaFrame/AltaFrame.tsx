@@ -1,4 +1,4 @@
-import "./altaFrame.scss";
+import "./AltaFrame.scss";
 
 const AltaFrame = () => {
   return (
