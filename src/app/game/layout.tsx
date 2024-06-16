@@ -28,7 +28,7 @@ const GameLayout = ({
           className="box-shadow"
         >
           <main className="game-container">
-            <h1 className="title">Alta Flash</h1>
+            <h1 className="title">AltaFlash</h1>
             <Tooltip
               className="tooltip"
               onClick={() => setShowInfo((prev) => !prev)}
