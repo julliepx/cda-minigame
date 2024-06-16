@@ -44,10 +44,27 @@ Está disponibilizado na pasta public um arquivo JSON com possíveis configuraç
 
 ### Passo a passo:
  1. Clonar o repositório:
-	```git clone https://github.com/julliepx/cda-minigame.git```
+	```
+	git clone https://github.com/julliepx/cda-minigame.git
+	```
 
- 2. Instalar as dependências:
- ```npm install```
+ 3. Instalar as dependências:
+ 	```
+	npm install
+	```
  
- 3. Executar o projeto:
-	```npm run dev```
+ 5. Executar o projeto:
+	```
+	npm run dev
+	```
+
+ ## Melhorias para serem Exploradas
+*Essa seção contém melhorias que eu faria em um futuro próximo, ou até mesmo se tivesse um pouco mais de tempo para aplicá-las*
+
+- Criação de testes unitários (foram despriorizados para ter mais tempo de implementar novas features)
+- Modificação do uso da Context API para um gerenciador mais robusto como Redux ou Zustand.
+- Implementar o salvamento da pontuação no modo de jogo **Teste sua Velocidade** 
+	> Atualmente não salva pois a intenção seria futuramente salvar tanto o tempo de execução juntamente com a quantidade de sequências executadas.
+	
+- Opções para trocar dificuldade enquanto já em jogo (eg. Telas de vitória e derrota)
+- Implementar mais dificuldades assim como novos modos de jogo (.eg Modo de jogo onde o jogador teria X tempo para pressionar o máximo de teclas possível.)
