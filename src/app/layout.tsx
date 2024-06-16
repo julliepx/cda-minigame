@@ -9,7 +9,7 @@ const almarai = Almarai({
 
 export const metadata: Metadata = {
   title: "AltaFlash",
-  description: "A minigame where the player has to be faster than The Flash.",
+  description: "Você consegue ser o mais rápido?",
 };
 
 export default function RootLayout({
