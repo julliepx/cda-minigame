@@ -12,12 +12,13 @@ const EndGame = () => {
 
   useEffect(() => {
     if (status === GameStatus.WIN) {
-      updateRanking(currentTime, totalTime);
-
       if (mode === GameMode.LEVELS) {
         setNumberOfKeys((keys) => keys + 2);
         startGame(totalTime - 1000);
+        return;
       }
+
+      updateRanking(currentTime, totalTime);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

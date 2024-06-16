@@ -1,6 +1,7 @@
 export const LOCAL_STORAGE_KEYS = {
   username: "alta-username",
   ranking: "alta-ranking",
+  newcomer: "alta-newcomer",
 } as const;
 
 export const setItemToLocalStorage = <T>(key: string, data: T): void => {

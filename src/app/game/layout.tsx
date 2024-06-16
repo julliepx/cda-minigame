@@ -2,8 +2,7 @@
 import AltaCrownLine from "@/components/svgs/alta/AltaCrownLine/AltaCrownLine";
 import AltaFrame from "@/components/svgs/alta/AltaFrame/AltaFrame";
 import Tooltip from "@/components/svgs/icons/Tooltip/Tooltip";
-import { GameContextProvider, useGameContext } from "@/contexts/GameContext";
-import { GameStatus } from "@/types/game";
+import { GameContextProvider } from "@/contexts/GameContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import AudioHandler from "./components/common/AudioHandler/AudioHandler";
@@ -15,7 +14,6 @@ const GameLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const { status } = useGameContext();
   const [showInfo, setShowInfo] = useState(false);
 
   return (
@@ -31,12 +29,10 @@ const GameLayout = ({
         >
           <main className="game-container">
             <h1 className="title">Alta Flash</h1>
-            {status === GameStatus.IDLE && (
-              <Tooltip
-                className="tooltip"
-                onClick={() => setShowInfo((prev) => !prev)}
-              />
-            )}
+            <Tooltip
+              className="tooltip"
+              onClick={() => setShowInfo((prev) => !prev)}
+            />
             <GameContextProvider>{children}</GameContextProvider>
             <AudioHandler />
             <AltaCrownLine />
