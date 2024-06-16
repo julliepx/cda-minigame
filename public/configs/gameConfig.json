@@ -1,5 +1,5 @@
 {
-  "keyType": "NUMERIC",
+  "keyType": "ALPHANUMERIC",
   "difficulties": [
     {
       "difficulty": "EASY",
